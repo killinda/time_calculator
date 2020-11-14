@@ -12,7 +12,7 @@ def add_time(start, duration,the_day_of_week=None):
   else:
       new_time_hour = (start_hour%12+12) + duration_hour 
   new_time_minute = start_minute + duration_minute
-  if new_time_minute > 60 :
+  if new_time_minute >=60 :
       new_time_minute -=60
       new_time_hour +=1
   duration_day = new_time_hour//24

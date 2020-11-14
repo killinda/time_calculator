@@ -43,7 +43,7 @@ def add_time(start, duration,the_day_of_week=None):
   if duration_day >1:
       new_time = new_time + " "+ "("+ str(duration_day) + " " + "days later)"
   ##calculate the final day of week
-  if the_day_of_week != None:
+  if the_day_of_week :
       the_day_of_week = the_day_of_week.lower()
       Week_name = ["monday","tuesday","wednesday","thursday",'friday','saturday','sunday']
       week_number = Week_name.index(the_day_of_week)

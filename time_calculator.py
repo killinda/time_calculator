@@ -45,10 +45,10 @@ def add_time(start, duration,the_day_of_week=None):
   ##calculate the final day of week
   if the_day_of_week != None:
       the_day_of_week = the_day_of_week.lower()
-      week_name = ["monday","tuesday","wednesday","thursday",'friday','saturday','sunday']
-      week_number = week_name.index(the_day_of_week)
+      Week_name = ["monday","tuesday","wednesday","thursday",'friday','saturday','sunday']
+      week_number = Week_name.index(the_day_of_week)
       final_day_of_week_number = (week_number + duration_day)%7
-      final_day_of_week = week_name[final_day_of_week_number].capitalize()
+      final_day_of_week = Week_name[final_day_of_week_number].capitalize()
       final_day_of_week = ", "+final_day_of_week
     ##insert final day of week to new_time
       new_time_list = list(new_time)

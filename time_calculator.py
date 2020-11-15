@@ -8,9 +8,9 @@ def add_time(start, duration,the_day_of_week=None):
   duration_minute = int(duration.split(":")[1])
   ##generate the time and duration days
   if clock == "AM":
-      new_time_hour = start_hour%12 + duration_hour   
+      new_time_hour = start_hour + duration_hour   
   else:
-      new_time_hour = (start_hour%12+12) + duration_hour 
+      new_time_hour = (start_hour+12) + duration_hour 
   new_time_minute = start_minute + duration_minute
   if new_time_minute >=60 :
       new_time_minute -=60
@@ -30,9 +30,8 @@ def add_time(start, duration,the_day_of_week=None):
             new_time =  str(new_time_hour-12)+ ":" + new_time_minute + " "+"PM"
   ##calculate the final day of week
   if the_day_of_week :
-      the_day_of_week = the_day_of_week.lower()
       Week_name = ["monday","tuesday","wednesday","thursday",'friday','saturday','sunday']
-      week_number = Week_name.index(the_day_of_week)
+      week_number = Week_name.index(the_day_of_week.lower())
       final_day_of_week_number = (week_number + duration_day)%7
       final_day_of_week = Week_name[final_day_of_week_number].capitalize()
       final_day_of_week = ", "+final_day_of_week
@@ -48,3 +47,4 @@ def add_time(start, duration,the_day_of_week=None):
 
   
   
+
